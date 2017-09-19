@@ -1,0 +1,89 @@
+swagger: '2.0'
+info:
+  title: Neotoma
+  description:  Mozilla's Pack Rat, storing commits away in its "midden".
+  version: "0.1.0"
+securityDefinitions:
+   APIKeyHeader:
+     type: apiKey
+     in: header
+     name: X-API-Key
+produces:
+  - application/json
+paths:
+  /:
+    get:
+      summary: Redirect to the swagger UI.
+      responses:
+        302:
+          description: Redirect to swagger UI.
+          headers:
+            Location:
+              description: URL for redirection.
+              type: string
+  /request-review:
+    post:
+      summary: Submit commits for review using a bundle.
+      security:
+        - APIKeyHeader: []
+      consumes:
+        - multipart/form-data
+      parameters:
+        - in: formData
+          name: repository_callsign
+          description: Phabricator callsign of the repo the bundle applies to.
+          type: string
+          required: true
+        - in: formData
+          name: first
+          description: The first changeset to be part of the diff of the
+                       desired Phabricator revision. The created diff will
+                       be from parent(first) to last.
+          type: string
+          required: true
+        - in: formData
+          name: last
+          description: The last changeset to be part of the diff of the desired
+                       Phabricator revision.
+          type: string
+          required: true
+        - in: formData
+          name: revision_id
+          description: The Phabricator revision id to be updated. If not
+                       provided a new revision will be created.
+          type: integer
+        - in: formData
+          name: bundle
+          description: The mercurial bundle file to upload.
+          type: file
+          required: true
+      responses:
+        200:
+          description: Okay
+        default:
+          description: Error
+          schema:
+            $ref: '#/definitions/Error'
+
+definitions:
+  # RFS7807 Problem Details for HTTP APIs (https://tools.ietf.org/html/rfc7807)
+  # is used for error messages. Extensions to the error can be speced using an
+  # "allOf" schema keyword along with additional schema definition
+  Error:
+    type: object
+    properties:
+      status:
+        type: integer
+      type:
+        type: string
+      title:
+        type: string
+      detail:
+        type: string
+      instance:
+        type: string
+    example:
+      status: 400
+      type: about:blank
+      title: Bad Request
+      detail: Missing formdata parameter 'bundle'

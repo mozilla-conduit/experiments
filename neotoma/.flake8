@@ -1,0 +1,6 @@
+[flake8]
+exclude =
+    .hg,
+    .git,
+    __pycache__,
+    .cache,

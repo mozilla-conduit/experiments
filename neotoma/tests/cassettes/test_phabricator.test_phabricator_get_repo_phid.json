@@ -1,0 +1,51 @@
+{
+  "http_interactions": [
+    {
+      "recorded_at": "2017-09-13T18:40:54",
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "attachments%5Buris%5D=True&constraints%5Bcallsigns%5D%5B0%5D=MOZILLACENTRAL&api.token=<PHAB_AUTH_TOKEN>"
+        },
+        "headers": {
+          "Accept": "*/*",
+          "Accept-Encoding": "identity",
+          "Connection": "keep-alive",
+          "Content-Length": "118",
+          "Content-Type": "application/x-www-form-urlencoded",
+          "User-Agent": "python-requests/2.18.4"
+        },
+        "method": "GET",
+        "uri": "https://phabricator-dev.allizom.org/api/diffusion.repository.search"
+      },
+      "response": {
+        "body": {
+          "encoding": null,
+          "string": "{\"result\":{\"data\":[{\"id\":2,\"type\":\"REPO\",\"phid\":\"PHID-REPO-myz5mwsn6hrgkxn2ndos\",\"fields\":{\"name\":\"mozilla-central\",\"vcs\":\"hg\",\"callsign\":\"MOZILLACENTRAL\",\"shortName\":\"mozilla-central\",\"status\":\"active\",\"isImporting\":false,\"spacePHID\":null,\"dateCreated\":1503687796,\"dateModified\":1503931065,\"policy\":{\"view\":\"users\",\"edit\":\"admin\",\"diffusion.push\":\"users\"}},\"attachments\":{\"uris\":{\"uris\":[{\"id\":\"30\",\"type\":\"RURI\",\"phid\":\"PHID-RURI-ybzshklnq3futeflfnjx\",\"fields\":{\"repositoryPHID\":\"PHID-REPO-myz5mwsn6hrgkxn2ndos\",\"uri\":{\"raw\":\"https:\\/\\/hg.mozilla.org\\/mozilla-central\",\"display\":\"https:\\/\\/hg.mozilla.org\\/mozilla-central\",\"effective\":\"https:\\/\\/hg.mozilla.org\\/mozilla-central\",\"normalized\":\"hg.mozilla.org\\/mozilla-central\"},\"io\":{\"raw\":\"observe\",\"default\":\"none\",\"effective\":\"observe\"},\"display\":{\"raw\":\"never\",\"default\":\"never\",\"effective\":\"never\"},\"credentialPHID\":null,\"disabled\":false,\"builtin\":{\"protocol\":null,\"identifier\":null},\"dateCreated\":\"1503698511\",\"dateModified\":\"1503698511\"}},{\"id\":\"13\",\"type\":\"RURI\",\"phid\":\"PHID-RURI-7ytbcvhqp4udmt3gyglp\",\"fields\":{\"repositoryPHID\":\"PHID-REPO-myz5mwsn6hrgkxn2ndos\",\"uri\":{\"raw\":\"ssh:\\/\\/id\",\"display\":\"ssh:\\/\\/phabricator-dev.allizom.org\\/diffusion\\/2\\/mozilla-central\\/\",\"effective\":\"ssh:\\/\\/phabricator-dev.allizom.org\\/diffusion\\/2\\/mozilla-central\\/\",\"normalized\":\"phabricator-dev.allizom.org\\/diffusion\\/2\"},\"io\":{\"raw\":\"default\",\"default\":\"read\",\"effective\":\"read\"},\"display\":{\"raw\":\"default\",\"default\":\"never\",\"effective\":\"never\"},\"credentialPHID\":null,\"disabled\":false,\"builtin\":{\"protocol\":\"ssh\",\"identifier\":\"id\"},\"dateCreated\":\"1503687796\",\"dateModified\":\"1503687796\"}},{\"id\":\"12\",\"type\":\"RURI\",\"phid\":\"PHID-RURI-vcleb6ije4xjyhdwmoe7\",\"fields\":{\"repositoryPHID\":\"PHID-REPO-myz5mwsn6hrgkxn2ndos\",\"uri\":{\"raw\":\"ssh:\\/\\/shortname\",\"display\":\"ssh:\\/\\/phabricator-dev.allizom.org\\/source\\/mozilla-central\\/\",\"effective\":\"ssh:\\/\\/phabricator-dev.allizom.org\\/source\\/mozilla-central\\/\",\"normalized\":\"phabricator-dev.allizom.org\\/source\\/mozilla-central\"},\"io\":{\"raw\":\"default\",\"default\":\"read\",\"effective\":\"read\"},\"display\":{\"raw\":\"default\",\"default\":\"always\",\"effective\":\"always\"},\"credentialPHID\":null,\"disabled\":false,\"builtin\":{\"protocol\":\"ssh\",\"identifier\":\"shortname\"},\"dateCreated\":\"1503687796\",\"dateModified\":\"1503687796\"}},{\"id\":\"11\",\"type\":\"RURI\",\"phid\":\"PHID-RURI-pjlvohdqs7kzra57w6im\",\"fields\":{\"repositoryPHID\":\"PHID-REPO-myz5mwsn6hrgkxn2ndos\",\"uri\":{\"raw\":\"ssh:\\/\\/callsign\",\"display\":\"ssh:\\/\\/phabricator-dev.allizom.org\\/diffusion\\/MOZILLACENTRAL\\/mozilla-central\\/\",\"effective\":\"ssh:\\/\\/phabricator-dev.allizom.org\\/diffusion\\/MOZILLACENTRAL\\/mozilla-central\\/\",\"normalized\":\"phabricator-dev.allizom.org\\/diffusion\\/MOZILLACENTRAL\"},\"io\":{\"raw\":\"default\",\"default\":\"read\",\"effective\":\"read\"},\"display\":{\"raw\":\"default\",\"default\":\"never\",\"effective\":\"never\"},\"credentialPHID\":null,\"disabled\":false,\"builtin\":{\"protocol\":\"ssh\",\"identifier\":\"callsign\"},\"dateCreated\":\"1503687796\",\"dateModified\":\"1503687796\"}}]}}}],\"maps\":{},\"query\":{\"queryKey\":null},\"cursor\":{\"limit\":100,\"after\":null,\"before\":null,\"order\":null}},\"error_code\":null,\"error_info\":null}"
+        },
+        "headers": {
+          "Cache-Control": "no-store",
+          "Connection": "keep-alive",
+          "Content-Length": "3127",
+          "Content-Security-Policy": "default-src 'self' https://d1ro22lwo621zr.cloudfront.net data: 'unsafe-inline'; script-src 'self' https://d1ro22lwo621zr.cloudfront.net 'unsafe-inline'; object-src 'self'; report-uri /__cspreport__",
+          "Content-Type": "application/json",
+          "Date": "Wed, 13 Sep 2017 18:40:54 GMT",
+          "Expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+          "Set-Cookie": "phsid=A%2Fjliinmz4aq4nzalpw65mmrvjckcpund5bmid5afb; expires=Mon, 12-Sep-2022 18:40:54 GMT; Max-Age=157680000; path=/; domain=phabricator-dev.allizom.org; secure; httponly",
+          "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload",
+          "Vary": "Accept-Encoding",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "Deny",
+          "X-Powered-By": "PHP/5.6.31",
+          "X-XSS-Protection": "1; mode=block"
+        },
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "url": "https://phabricator-dev.allizom.org/api/diffusion.repository.search"
+      }
+    }
+  ],
+  "recorded_with": "betamax/0.8.0"
+}

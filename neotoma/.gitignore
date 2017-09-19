@@ -1,0 +1,7 @@
+__pycache__
+/*.egg-info/
+/.cache/
+/docker-compose.override.yml
+*.pyc
+/.db/
+/repos/

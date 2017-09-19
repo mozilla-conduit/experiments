@@ -1,0 +1,51 @@
+{
+  "http_interactions": [
+    {
+      "recorded_at": "2017-09-13T18:40:53",
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "api.token=api-invalidxxxxxxxxxxxxxxxxxxxxx"
+        },
+        "headers": {
+          "Accept": "*/*",
+          "Accept-Encoding": "identity",
+          "Connection": "keep-alive",
+          "Content-Length": "42",
+          "Content-Type": "application/x-www-form-urlencoded",
+          "User-Agent": "python-requests/2.18.4"
+        },
+        "method": "GET",
+        "uri": "https://phabricator-dev.allizom.org/api/user.whoami"
+      },
+      "response": {
+        "body": {
+          "encoding": null,
+          "string": "{\"result\":null,\"error_code\":\"ERR-INVALID-AUTH\",\"error_info\":\"API token \\\"api-invalidxxxxxxxxxxxxxxxxxxxxx\\\" is not valid.\"}"
+        },
+        "headers": {
+          "Cache-Control": "no-store",
+          "Connection": "keep-alive",
+          "Content-Length": "123",
+          "Content-Security-Policy": "default-src 'self' https://d1ro22lwo621zr.cloudfront.net data: 'unsafe-inline'; script-src 'self' https://d1ro22lwo621zr.cloudfront.net 'unsafe-inline'; object-src 'self'; report-uri /__cspreport__",
+          "Content-Type": "application/json",
+          "Date": "Wed, 13 Sep 2017 18:40:53 GMT",
+          "Expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+          "Set-Cookie": "phsid=A%2Fzmsf34223g3flssl67yxgrerpesioq4koyxspysi; expires=Mon, 12-Sep-2022 18:40:53 GMT; Max-Age=157680000; path=/; domain=phabricator-dev.allizom.org; secure; httponly",
+          "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload",
+          "Vary": "Accept-Encoding",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "Deny",
+          "X-Powered-By": "PHP/5.6.31",
+          "X-XSS-Protection": "1; mode=block"
+        },
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "url": "https://phabricator-dev.allizom.org/api/user.whoami"
+      }
+    }
+  ],
+  "recorded_with": "betamax/0.8.0"
+}
