@@ -1,0 +1,4 @@
+click
+dulwich
+requests
+pytest
